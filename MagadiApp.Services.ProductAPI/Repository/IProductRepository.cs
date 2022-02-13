@@ -6,7 +6,7 @@ namespace MagadiApp.Services.ProductAPI.Repository
     {
         Task<IEnumerable<ProductDto>> GetProducts();
         Task<ProductDto> GetProductById(int productId);
-        Task<ProductDto> CreateupdateProduct(ProductDto productDto);
+        Task<ProductDto> CreateUpdateProduct(ProductDto productDto);
         Task<bool> DeleteProduct(int productId);
     }
 }
