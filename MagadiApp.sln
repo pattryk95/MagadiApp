@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{0ECC36AC-212F-4CBA-AAEE-9CA6711D714F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{AD696B96-1C17-40B4-981F-BDDC2978DB21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagadiApp.Services.ProductAPI", "MagadiApp.Services.ProductAPI\MagadiApp.Services.ProductAPI.csproj", "{81A6077B-CFDB-4104-932E-9E586691641E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81A6077B-CFDB-4104-932E-9E586691641E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A6077B-CFDB-4104-932E-9E586691641E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A6077B-CFDB-4104-932E-9E586691641E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A6077B-CFDB-4104-932E-9E586691641E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{81A6077B-CFDB-4104-932E-9E586691641E} = {AD696B96-1C17-40B4-981F-BDDC2978DB21}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B24D2F21-40CF-4D78-B76B-26017ECC061D}
+	EndGlobalSection
+EndGlobal
