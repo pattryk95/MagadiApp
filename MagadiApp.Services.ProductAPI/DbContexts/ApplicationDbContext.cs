@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MagadiApp.Services.ProductAPI.DbContexts.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MagadiApp.Services.ProductAPI.DbContexts
 {
@@ -8,5 +9,8 @@ namespace MagadiApp.Services.ProductAPI.DbContexts
         {
 
         }
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
