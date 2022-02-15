@@ -1,3 +1,4 @@
+using MagadiApp.Services.ProductAPI;
 using MagadiApp.Services.ProductAPI.DbContexts;
 using MagadiApp.Services.ProductAPI.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+builder.Services.AddScoped<DataScraper>();
+
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
@@ -20,6 +24,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
 
 app.UseAuthorization();
 

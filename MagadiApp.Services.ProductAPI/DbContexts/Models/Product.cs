@@ -8,16 +8,20 @@ namespace MagadiApp.Services.ProductAPI.DbContexts.Models
         [Key]
         public int ProductId { get; set; }
         [Required]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(100)]
         public string Name { get; set; }
         [Range(1,1000)]
         public double Price { get; set; }
-        public string Description { get; set; }
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(250)]
+        public string? Description { get; set; }
 
-        public int CategoryId { get; set; }
+
+        public int SubcategoryId { get; set; }
         
-        [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
-        public string ImageUrl { get; set; }
+        [ForeignKey("SubcategoryId")]
+        public Subcategory Subcategory { get; set; }
 
     }
 }

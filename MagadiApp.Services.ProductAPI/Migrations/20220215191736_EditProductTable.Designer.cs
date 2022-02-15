@@ -3,6 +3,7 @@ using MagadiApp.Services.ProductAPI.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagadiApp.Services.ProductAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220215191736_EditProductTable")]
+    partial class EditProductTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,12 +33,11 @@ namespace MagadiApp.Services.ProductAPI.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("VARCHAR(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("MagadiApp.Services.ProductAPI.DbContexts.Models.Product", b =>
@@ -66,7 +67,7 @@ namespace MagadiApp.Services.ProductAPI.Migrations
 
                     b.HasIndex("SubcategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("MagadiApp.Services.ProductAPI.DbContexts.Models.Subcategory", b =>
@@ -82,14 +83,13 @@ namespace MagadiApp.Services.ProductAPI.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("VARCHAR(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SubcategoryId");
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Subcategory", (string)null);
+                    b.ToTable("Subcategory");
                 });
 
             modelBuilder.Entity("MagadiApp.Services.ProductAPI.DbContexts.Models.Product", b =>
