@@ -21,6 +21,13 @@ namespace MagadiApp.Services.ProductAPI
                     _dbContext.Categories.AddRange(categories);
                     _dbContext.SaveChanges();
                 }
+
+                if (!_dbContext.Products.Any())
+                {
+                    var products = DataScraper.GetProducts();
+                    _dbContext.Products.AddRange(products);
+                    _dbContext.SaveChanges();
+                }
             }
         }
 
