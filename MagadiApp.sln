@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{0E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{AD696B96-1C17-40B4-981F-BDDC2978DB21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagadiApp.Services.ProductAPI", "MagadiApp.Services.ProductAPI\MagadiApp.Services.ProductAPI.csproj", "{81A6077B-CFDB-4104-932E-9E586691641E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagadiApp.Services.ProductAPI", "MagadiApp.Services.ProductAPI\MagadiApp.Services.ProductAPI.csproj", "{81A6077B-CFDB-4104-932E-9E586691641E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagadiApp.Web", "MagadiApp.Web\MagadiApp.Web.csproj", "{5D13ACE0-29A6-4660-9AC2-31D9DD8344B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{81A6077B-CFDB-4104-932E-9E586691641E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81A6077B-CFDB-4104-932E-9E586691641E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81A6077B-CFDB-4104-932E-9E586691641E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D13ACE0-29A6-4660-9AC2-31D9DD8344B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D13ACE0-29A6-4660-9AC2-31D9DD8344B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D13ACE0-29A6-4660-9AC2-31D9DD8344B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D13ACE0-29A6-4660-9AC2-31D9DD8344B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{81A6077B-CFDB-4104-932E-9E586691641E} = {AD696B96-1C17-40B4-981F-BDDC2978DB21}
+		{5D13ACE0-29A6-4660-9AC2-31D9DD8344B5} = {0ECC36AC-212F-4CBA-AAEE-9CA6711D714F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B24D2F21-40CF-4D78-B76B-26017ECC061D}
