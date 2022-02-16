@@ -1,4 +1,4 @@
-﻿namespace MagadiApp.Services.ProductAPI.DbContexts.Models.Dtos
+﻿namespace MagadiApp.Services.ProductAPI.Models.Dtos
 {
     public class ProductDto
     {
@@ -6,6 +6,6 @@
         public string Name { get; set; }
         public double Price { get; set; }
         public string Description { get; set; }
-        public Category? Category { get; set; }
+        public CategoryDto? CategoryDto { get; set; }
     }
 }

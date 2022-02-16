@@ -1,5 +1,5 @@
-﻿using MagadiApp.Services.ProductAPI.DbContexts.Models.Dto;
-using MagadiApp.Services.ProductAPI.DbContexts.Models.Dtos;
+﻿using MagadiApp.Services.ProductAPI.Models.Dto;
+using MagadiApp.Services.ProductAPI.Models.Dtos;
 using MagadiApp.Services.ProductAPI.Repository;
 using Microsoft.AspNetCore.Mvc;
 

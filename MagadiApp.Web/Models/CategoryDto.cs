@@ -1,4 +1,4 @@
-﻿namespace MagadiApp.Services.ProductAPI.DbContexts.Models.Dtos
+﻿namespace MagadiApp.Web.Models.Dtos
 {
     public class CategoryDto
     {

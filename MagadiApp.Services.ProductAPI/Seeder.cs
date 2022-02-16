@@ -1,5 +1,5 @@
 ﻿using MagadiApp.Services.ProductAPI.DbContexts;
-using MagadiApp.Services.ProductAPI.DbContexts.Models;
+using MagadiApp.Services.ProductAPI.Models;
 
 namespace MagadiApp.Services.ProductAPI
 {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MagadiApp.Services.ProductAPI.DbContexts.Models
+namespace MagadiApp.Services.ProductAPI.Models
 {
     public class Category
     {

@@ -1,4 +1,4 @@
-﻿using MagadiApp.Services.ProductAPI.DbContexts.Models.Dtos;
+﻿using MagadiApp.Services.ProductAPI.Models.Dtos;
 
 namespace MagadiApp.Services.ProductAPI.Repository
 {

@@ -1,4 +1,4 @@
-﻿using MagadiApp.Services.ProductAPI.DbContexts.Models;
+﻿using MagadiApp.Services.ProductAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace MagadiApp.Services.ProductAPI.DbContexts

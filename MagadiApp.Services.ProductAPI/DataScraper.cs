@@ -1,5 +1,5 @@
 ﻿using HtmlAgilityPack;
-using MagadiApp.Services.ProductAPI.DbContexts.Models;
+using MagadiApp.Services.ProductAPI.Models;
 
 namespace MagadiApp.Services.ProductAPI
 {

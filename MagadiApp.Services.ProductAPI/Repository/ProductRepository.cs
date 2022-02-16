@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MagadiApp.Services.ProductAPI.DbContexts;
-using MagadiApp.Services.ProductAPI.DbContexts.Models;
-using MagadiApp.Services.ProductAPI.DbContexts.Models.Dtos;
+using MagadiApp.Services.ProductAPI.Models;
+using MagadiApp.Services.ProductAPI.Models.Dtos;
 using Microsoft.EntityFrameworkCore;
 
 namespace MagadiApp.Services.ProductAPI.Repository
