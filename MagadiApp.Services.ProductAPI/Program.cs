@@ -14,6 +14,7 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<Seeder>();
+builder.Services.AddSwaggerGen();
 
 
 
@@ -28,6 +29,12 @@ seeder.Seed();
 
 app.UseHttpsRedirection();
 
+// add method to generate swagger JSON
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{                       //default path to file and name of api docs
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "MagadiApp.ProductAPI");
+});
 app.UseRouting();
 
 app.UseAuthorization();

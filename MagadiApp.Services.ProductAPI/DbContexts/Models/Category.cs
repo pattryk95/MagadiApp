@@ -11,7 +11,5 @@ namespace MagadiApp.Services.ProductAPI.DbContexts.Models
         [Column(TypeName = "VARCHAR")]
         [StringLength(250)]
         public string Name { get; set; }
-
-        public virtual List<Category> Categories { get; set; }
     }
 }
