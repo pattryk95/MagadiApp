@@ -12,16 +12,19 @@ builder.Services.AddControllers();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-
-builder.Services.AddScoped<DataScraper>();
-
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<Seeder>();
 
 
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+var scope = app.Services.CreateScope();
+var seeder = scope.ServiceProvider.GetRequiredService<Seeder>();
+
+seeder.Seed();
 
 app.UseHttpsRedirection();
 

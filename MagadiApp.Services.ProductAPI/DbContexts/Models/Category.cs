@@ -12,6 +12,6 @@ namespace MagadiApp.Services.ProductAPI.DbContexts.Models
         [StringLength(250)]
         public string Name { get; set; }
 
-        public virtual List<Subcategory> Subcategories { get; set; }
+        public virtual List<Category> Categories { get; set; }
     }
 }

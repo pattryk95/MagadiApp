@@ -10,23 +10,11 @@ namespace MagadiApp.Services.ProductAPI.Controllers
     {
         protected ResponseDto _response;
         private IProductRepository _productRepository;
-        private readonly DataScraper _dataScraper;
 
-        public ProductApiController(IProductRepository productRepository, DataScraper dataScraper)
+        public ProductApiController(IProductRepository productRepository)
         {
             _productRepository = productRepository;
-            _dataScraper = dataScraper;
             _response = new ResponseDto();
-        }
-
-        [HttpGet]
-        [Route("test")]
-        public ActionResult Test()
-        {
-            
-            _dataScraper.GetData();
-
-            return Ok();
         }
 
         [HttpGet]

@@ -52,8 +52,7 @@ namespace MagadiApp.Services.ProductAPI.Repository
         public async Task<ProductDto> GetProductById(int productId)
         {
             Product productList = await _db.Products
-                                            .Include(p=> p.Subcategory)
-                                            .ThenInclude(s => s.Category)
+                                            .Include(p=> p.Category)
                                             .FirstOrDefaultAsync(x => x.ProductId == productId);
             return _mapper.Map<ProductDto>(productList);
         }

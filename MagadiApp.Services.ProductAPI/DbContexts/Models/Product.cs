@@ -18,10 +18,10 @@ namespace MagadiApp.Services.ProductAPI.DbContexts.Models
         public string? Description { get; set; }
 
 
-        public int SubcategoryId { get; set; }
+        public int? CategoryId { get; set; }
         
-        [ForeignKey("SubcategoryId")]
-        public Subcategory Subcategory { get; set; }
+        [ForeignKey("CategoryId")]
+        public Category? Category { get; set; }
 
     }
 }

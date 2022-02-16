@@ -3,43 +3,25 @@ using MagadiApp.Services.ProductAPI.DbContexts.Models;
 
 namespace MagadiApp.Services.ProductAPI
 {
-    public class DataScraper
+    public static class DataScraper
     {
         private const string BaseUrl = "https://studiourodymagadi.pl/cennik/";
 
-         public List<Category> categories { get; set; } = new List<Category>();
-
-
-        public void GetData()
+        public static IEnumerable<Category> GetCategory()
         {
+
             var web = new HtmlWeb();
             var document = web.Load(BaseUrl);
 
-            // document.QuerySelectorAll(".cennik-box h2.offer-title2");
-            var tableRows = document.QuerySelectorAll(".cennik-box h2, p");
+            var tableRows = document.QuerySelectorAll(".cennik-box > .offer-title2");
 
-         /*   
             foreach (var row in tableRows)
             {
-                if (row.Attributes["class"].Value == "offer-title2")
+               yield return new Category()
                 {
-                    var cat = new Category { Name = row.InnerText };
-
-                    categories.Add(cat);
-                }
+                    Name = row.InnerText.Replace("&nbsp;", " ").ToUpper().Trim(),
+                };
             }
-           */ 
-            
-            var newTab = tableRows
-                .Select((x, i) => new { Index = i, Value = x })
-                .ToList();
-            
         }
-
-        private List<T> makeSeeds(IGrouping elements)
-        {
-
-        }
-
     }
 }
