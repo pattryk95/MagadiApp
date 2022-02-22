@@ -1,4 +1,4 @@
-﻿namespace MagadiApp.Web.Models.Dtos
+﻿namespace MagadiApp.Web.Models
 {
     public class ProductDto
     {

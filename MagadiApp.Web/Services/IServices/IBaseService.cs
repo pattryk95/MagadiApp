@@ -1,5 +1,5 @@
 ﻿using MagadiApp.Web.Models;
-using MagadiApp.Web.Models.Dto;
+using MagadiApp.Web.Models;
 
 namespace MagadiApp.Web.Services.IServices
 {

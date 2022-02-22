@@ -1,4 +1,4 @@
-﻿namespace MagadiApp.Web.Models.Dto
+﻿namespace MagadiApp.Web.Models
 {
     public class ResponseDto
     {

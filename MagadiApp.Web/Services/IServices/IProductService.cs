@@ -1,4 +1,4 @@
-﻿using MagadiApp.Web.Models.Dtos;
+﻿using MagadiApp.Web.Models;
 
 namespace MagadiApp.Web.Services.IServices
 {
