@@ -3,66 +3,65 @@ using MagadiApp.Web.Services.IServices;
 
 namespace MagadiApp.Web.Services
 {
-    public class ProductService : BaseService, IProductService
+    public class CategoryService : BaseService, ICategoryService
     {
         private readonly IHttpClientFactory _clientFactory;
 
-        public ProductService(IHttpClientFactory clientFactory) : base(clientFactory)
+        public CategoryService(IHttpClientFactory clientFactory) : base(clientFactory)
         {
             _clientFactory = clientFactory;
         }
-        public async Task<T> CreateProductAsync<T>(ProductDto productDto)
+        public async Task<T> CreateCategoryAsync<T>(CategoryDto categoryDto)
         {
             return await SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.POST,
-                Data = productDto,
-                Url = SD.ProductAPIBase + "/api/products",
+                Data = categoryDto,
+                Url = SD.ProductAPIBase + "/api/categories",
                 AccessToken = ""
 
             });   
         }
 
-        public async Task<T> DeleteProductAsync<T>(int id)
+        public async Task<T> DeleteCategoryAsync<T>(int id)
         {
             return await SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = SD.ProductAPIBase + "/api/products/" + id,
+                Url = SD.ProductAPIBase + "/api/categories" + id,
                 AccessToken = ""
 
             });
         }
 
-        public async Task<T> GetAllProductsAsync<T>()   
+        public async Task<T> GetAllCategoriesAsync<T>()   
         {
             return await SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.ProductAPIBase + "/api/products",
+                Url = SD.ProductAPIBase + "/api/categories",
                 AccessToken = ""
 
             });
         }
 
-        public async Task<T> GetProductByIdAsync<T>(int id)
+        public async Task<T> GetCategoryByIdAsync<T>(int id)
         {
             return await SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.ProductAPIBase + "/api/products/" + id,
+                Url = SD.ProductAPIBase + "/api/categories" + id,
                 AccessToken = ""
 
             });
         }
 
-        public async Task<T> UpdateProductAsync<T>(ProductDto productDto)
+        public async Task<T> UpdateCategoryAsync<T>(CategoryDto categoryDto)
         {
             return await SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.PUT,
-                Data = productDto,
-                Url = SD.ProductAPIBase + "/api/products/" + productDto.ProductId,
+                Url = SD.ProductAPIBase + "/api/categories",
                 AccessToken = ""
 
             });

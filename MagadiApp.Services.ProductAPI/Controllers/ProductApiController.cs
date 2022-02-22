@@ -53,7 +53,6 @@ namespace MagadiApp.Services.ProductAPI.Controllers
         }
 
         [HttpPost]
-        [Route("{id}")]
         public async Task<ResponseDto> Post([FromBody] ProductDto productDto)
         {
             try

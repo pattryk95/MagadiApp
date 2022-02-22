@@ -1,5 +1,4 @@
 ﻿using MagadiApp.Web.Models;
-using MagadiApp.Web.Models;
 using MagadiApp.Web.Services.IServices;
 using Newtonsoft.Json;
 using System.Text;

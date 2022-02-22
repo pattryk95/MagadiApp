@@ -15,12 +15,23 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<Seeder>();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FrontEndClient", builder =>
+
+        builder.AllowAnyMethod()
+        .AllowAnyHeader()
+        .WithOrigins("https://localhost:7219")
+    );
+});
 
 
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+app.UseCors("FrontEndClient");
 
 var scope = app.Services.CreateScope();
 var seeder = scope.ServiceProvider.GetRequiredService<Seeder>();
