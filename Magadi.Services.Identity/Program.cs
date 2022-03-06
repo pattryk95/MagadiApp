@@ -1,4 +1,5 @@
 using Magadi.Services.Identity;
+using Magadi.Services.Identity.DataSeeder;
 using Magadi.Services.Identity.DbContexts;
 using Magadi.Services.Identity.Models;
 using Microsoft.AspNetCore.Identity;
@@ -23,11 +24,18 @@ var identityServerBuilder = builder.Services.AddIdentityServer(options =>
 .AddInMemoryClients(SD.Clients)
 .AddAspNetIdentity<ApplicationUser>();
 
+builder.Services.AddScoped<IDataSeeder, DataSeeder>();
+
 identityServerBuilder.AddDeveloperSigningCredential();
 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+var scope = app.Services.CreateScope();
+var dataSeeder = scope.ServiceProvider.GetRequiredService<IDataSeeder>();
+
+dataSeeder.Seed();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
