@@ -1,6 +1,7 @@
 ﻿using MagadiApp.Services.ProductAPI.Models.Dto;
 using MagadiApp.Services.ProductAPI.Models.Dtos;
 using MagadiApp.Services.ProductAPI.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MagadiApp.Services.ProductAPI.Controllers
@@ -16,7 +17,7 @@ namespace MagadiApp.Services.ProductAPI.Controllers
             _productRepository = productRepository;
             _response = new ResponseDto();
         }
-
+        [Authorize]
         [HttpGet]
         public async Task<ResponseDto> Get()
         {
@@ -35,6 +36,7 @@ namespace MagadiApp.Services.ProductAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         [Route("{id}")]
         public async Task<ResponseDto> Get(int id)
         {
@@ -53,6 +55,7 @@ namespace MagadiApp.Services.ProductAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ResponseDto> Post([FromBody] ProductDto productDto)
         {
             try
@@ -88,6 +91,7 @@ namespace MagadiApp.Services.ProductAPI.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         [Route("{id}")]
         public async Task<ResponseDto> Delete(int id)
         {
